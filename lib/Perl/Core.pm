@@ -7,6 +7,7 @@ use warnings;
 use match::simple         ();
 use mro                   ();
 use feature               ();
+use PerlX::Maybe          ();
 use Syntax::Feature::Try  ();
 use Sub::Infix            ();
 
@@ -24,6 +25,7 @@ sub import
 
     Syntax::Feature::Try->install;
     no strict 'refs';
+    *{$caller . '::maybe'} = \&PerlX::Maybe::maybe;
     *{$caller . '::in'} = Sub::Infix::infix { match::simple::match @_ };
 }
  

@@ -1,3 +1,4 @@
+requires "PerlX::Maybe" => "0";
 requires "Sub::Infix" => "0";
 requires "Syntax::Feature::Try" => "0";
 requires "constant" => "0";
