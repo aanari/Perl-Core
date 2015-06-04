@@ -1,6 +1,6 @@
 # NAME
 
-Perl::Core
+Perl::Core - Perl core essentials in a single import
 
 # VERSION
 

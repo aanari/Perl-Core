@@ -1,25 +1,30 @@
 package Perl::Core;
 use 5.010_000;
- 
+
 use strict;
 use warnings;
  
-use mro     ();
-use feature ();
- 
-use IO::File   ();
-use IO::Handle ();
+use match::simple         ();
+use mro                   ();
+use feature               ();
+use Syntax::Feature::Try  ();
+use Sub::Infix            ();
 
 use constant DEFAULT_VERSION => ':5.14';
 
 sub import
 {
     my ($class, $version) = @_;
+    my $caller = scalar caller();
  
     warnings->import;
     strict->import;
     feature->import( $version ? ":$version" : DEFAULT_VERSION );
-    mro::set_mro( scalar caller(), 'c3' );
+    mro::set_mro($caller, 'c3');
+
+    Syntax::Feature::Try->install;
+    no strict 'refs';
+    *{$caller . '::in'} = Sub::Infix::infix { match::simple::match @_ };
 }
  
 sub unimport
