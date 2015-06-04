@@ -17,14 +17,19 @@ try {
 
 my $name = 'Bob';
 my $age;
+my $inches = 100;
+my $pounds = 150;
 
 my $person = {
     maybe name => $name,
     maybe age  => $age,
+    provided $inches > 200, height => $inches,
+    provided $pounds < 200, weight => $pounds,
 };
 cmp_deeply $person => {
-    name => $name,
-}, '"maybe" executed successfully';
+    name   => $name,
+    weight => $pounds,
+}, '"maybe/provided" executed successfully';
 
 define PI = 3.14;
 is PI() => 3.14, '"define" executed successfully';

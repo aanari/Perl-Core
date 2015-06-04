@@ -28,6 +28,7 @@ sub import
     Syntax::Feature::Try->install;
     no strict 'refs';
     *{$caller . '::maybe'} = \&PerlX::Maybe::maybe;
+    *{$caller . '::provided'} = \&PerlX::Maybe::provided;
     *{$caller . '::in'} = Sub::Infix::infix { match::simple::match @_ };
 }
  
