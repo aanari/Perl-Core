@@ -23,7 +23,7 @@ The following modules and keywords will be automatically loaded into your script
 - [strict](https://metacpan.org/pod/strict) – Restrict unsafe constructs
 - [warnings](https://metacpan.org/pod/warnings) – Enable optional warnings
 - [feature](https://metacpan.org/pod/feature) – Enable new language features based on selected version
-- [mro](https://metacpan.org/pod/mro) – Sane method resolution order under multiple inheritance (`Class::C3`)
+- [mro](https://metacpan.org/pod/mro) – Sane method resolution order under multiple inheritance ([Class::C3](https://metacpan.org/pod/Class::C3))
 - [match::simple](https://metacpan.org/pod/match::simple) – Simplified smartmatch with `|in|` keyword
 - [PerlX::Define](https://metacpan.org/pod/PerlX::Define) – Simplified constants with `define` keyword
 - [PerlX::Maybe](https://metacpan.org/pod/PerlX::Maybe) – Simplified conditional handling with `maybe/provided` keywords

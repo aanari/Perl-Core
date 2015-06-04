@@ -65,7 +65,7 @@ The following modules and keywords will be automatically loaded into your script
 
 =item L<feature> – Enable new language features based on selected version
 
-=item L<mro> – Sane method resolution order under multiple inheritance (C<Class::C3>)
+=item L<mro> – Sane method resolution order under multiple inheritance (L<Class::C3>)
 
 =item L<match::simple> – Simplified smartmatch with C<|in|> keyword
 
