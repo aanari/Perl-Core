@@ -8,7 +8,7 @@ version 0.0100
 
 # SYNOPSIS
 
-    use Perl::Core
+    use Perl::Core;
 
     # Your code here
 

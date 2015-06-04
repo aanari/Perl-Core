@@ -45,7 +45,7 @@ sub unimport
 
 =head1 SYNOPSIS
 
-    use Perl::Core
+    use Perl::Core;
 
     # Your code here
 
