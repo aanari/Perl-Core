@@ -41,3 +41,37 @@ sub unimport
 1;
 
 # ABSTRACT: Perl core essentials in a single import
+
+=head1 SYNOPSIS
+
+    use Perl::Core
+
+    # Your code here
+
+=head1 DESCRIPTION
+
+Perl::Core provides the best parts of Modern Perl in a single, user-friendly import. Perl version C<5.14> is used by default, but you can choose which version to use in your import statement.
+
+    use Perl::Core '5.18';
+
+The following modules and keywords will be automatically loaded into your script:
+
+=over
+
+=item L<strict> – Restrict unsafe constructs
+
+=item L<warnings> – Enable optional warnings
+
+=item L<feature> – Enable new language features based on selected version
+
+=item L<mro> – Sane method resolution order under multiple inheritance (C<Class::C3>)
+
+=item L<match::simple> – Simplified smartmatch with C<|in|> keyword
+
+=item L<PerlX::Define> – Simplified constants with C<define> keyword
+
+=item L<PerlX::Maybe> – Simplified conditional handling with C<maybe/provided> keywords
+
+=item L<Syntax::Feature::Try> – Sane exception handling with C<try/catch/finally> keywords
+
+=back
